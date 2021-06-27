@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//
+// Main.swift
+// Lesson 9 Challenge
+//
+// Created by Marcus A. Mosley on 2021-01-20
+// Copyright (C) 2021 Marcus A. Mosley. All rights reserved.
+//
+
+import SwiftUI
+import PlaygroundSupport
+
+// Exersise #1
+struct TaxCalculator {
+    
+    let tax = 0.13
+    
+    func totalWithTax(_ subtotal:Double) -&gt; Double {
+        
+        return subtotal * (1 + tax)
+    }
+}
+
+// Exersise #2
+struct BillSplitter {
+    
+    var tax = 0.13
+    
+    func splitBy(subtotal:Double, people:Int) -&gt; Double {
+        
+        let taxCalc = TaxCalculator()
+        let total = taxCalc.totalWithTax(subtotal)
+        return total / Double(people)
+    }
+}
+
+// Exercise #3
+let split = BillSplitter()
+print(split.splitBy(subtotal: 120, people: 5))
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 725}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
